@@ -2,7 +2,7 @@
 
 It is just a web example of an **Online Store** for the practical use of **react-router** and testing react with **jest**.
 
-## Built using
+## I will be using
 
 <ul>
     <li>
