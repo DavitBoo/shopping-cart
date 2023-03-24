@@ -1,13 +1,119 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App{
+  position: relative;
 }
+
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #CCDDD3;
+  font-family: 'Poppins', sans-serif;
+}
+
+h1{
+  font-size: 4rem;
+  text-align: center;
+}
+
+h2{
+  font-size: 2rem;
+  text-align: center;
+}
+
+
+h1, h2, h3{
+  color: #fff;
+  z-index: 10;
+}
+
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color: #fff;
+}
+
+.flex{
+  display: flex;
+}
+
+.flex-col{
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* ** *** header *** ** */
+#header{
+  /* background-color: #AFC2D5; */
+  position: sticky;
+  top:0;
+  left: 0;
+  z-index: 5;
+}
+
+#header ul{
+  justify-content: space-around;
+  align-items: center;
+}
+
+.home-nav a {
+  color: #fff;
+}
+
+.shop-nav a {
+  color: #000;
+}
+
+.cart-btn{
+  cursor: pointer;
+  position: relative;
+}
+
+.item-counter{
+  position: absolute;
+  left: -20px;
+  bottom: 0;
+  background-color: #fff;
+  border-radius: 100%;
+  padding: .1rem .5rem;
+}
+
+/* ** *** home page  *** ** */
+#home-page{
+  background: url('./assets/img/ketzalak_notewood.jpg');
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#home-page .container{
+  align-items: center;
+  max-width: 900px;
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.overlay-home{
+  position: absolute;
+  top:0;
+  left: 0;
+  background-color: #000000bd;
+  width: 100%;
+  height: 100%;
+
+}
+
