@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
 
 
 *{
@@ -13,7 +13,7 @@
 body{
   margin: 0;
   padding: 0;
-  background-color: #CCDDD3;
+  background-color: #e9f1ec;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -40,6 +40,7 @@ ul{
 a{
   text-decoration: none;
   color: #fff;
+  font-weight: 300;
 }
 
 .flex{
@@ -66,8 +67,21 @@ a{
   align-items: center;
 }
 
+/* ** *** *** home nav */
+
 .home-nav a {
   color: #fff;
+}
+
+.home-nav svg{
+  fill: #fff;
+}
+
+/* ** *** *** shop nav */
+
+.shop-nav{
+  background-color: #fff;
+  border-bottom: 1px solid #000;
 }
 
 .shop-nav a {
@@ -117,3 +131,53 @@ a{
 
 }
 
+/* Shop Page*/
+#shop-page{
+  align-items: center;
+  padding: 2rem;
+}
+
+/* ** search bar ** */
+#search-bar p{
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* ** item grid ** */
+#item-grid{
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+
+/* ** *** item  *** ** **/
+#item{
+  align-items: center;
+  gap: 1rem;
+  max-width: 500px;
+}
+
+#item img{
+  max-width: 150px;
+}
+
+
+#item .title{
+  font-size: 1.5rem;
+}
+
+#item .price{
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+#item .description{
+  font-weight: 300;
+}
+
+.available-stock{
+  font-weight: 300;
+  font-size: .8rem;
+  color: rgb(25, 137, 25)
+}

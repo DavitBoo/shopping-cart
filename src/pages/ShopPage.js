@@ -4,7 +4,7 @@ import SearchBar from '../components/SearchBar'
 
 export default function ShopPage() {
   return (
-    <div>
+    <div id="shop-page" className='flex-col'>
       <SearchBar/>
       <ItemGrid/>
     </div>

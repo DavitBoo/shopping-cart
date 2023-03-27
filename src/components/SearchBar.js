@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function SearchBar() {
   return (
-    <div>
-        <p>Search for what you are looking for!</p>
+    <div id="search-bar">
+        <p>¿Qué estás buscando? ¡Encuéntralo!</p>
         <form action="">
             <input type="text" />
             <button type="submit">Search</button>

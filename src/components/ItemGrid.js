@@ -3,7 +3,7 @@ import Item from './Item'
 
 export default function ItemGrid() {
   return (
-    <div>
+    <div id='item-grid' className='flex'>
         <Item/>
         <Item/>
         <Item/>
