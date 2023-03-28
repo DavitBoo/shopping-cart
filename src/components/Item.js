@@ -12,7 +12,7 @@ export default function Item() {
           <p className='price'>40€</p>
           <p className='description'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, alias.</p>
           <p className='available-stock'>available stock</p>
-          <NavLink to="product/1">Click!</NavLink>
+          <NavLink to="/product/1">Click!</NavLink>
         </div>
     </div>
   )

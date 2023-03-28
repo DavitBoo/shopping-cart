@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink, Route, Switch, useLocation } from 'react-router-dom';
+import logo from '../assets/img/logo.png'
 
 
 export default function Header() {
@@ -8,7 +9,7 @@ export default function Header() {
 
   if (location.pathname === "/") {
     navClass = "home-nav";
-  } else if (location.pathname === "/shop") {
+  } else {
     navClass = "shop-nav";
   }
 
@@ -16,7 +17,7 @@ export default function Header() {
   return (
     <div id="header">
         <ul className={`flex ${navClass}`}>
-            <h2><NavLink to="/" activeClassName="active">Ketzalak</NavLink></h2>
+            <NavLink to="/" activeClassName="active"><img src={logo} alt="" /></NavLink>
             <li>
                 <NavLink to="/" activeClassName="active">Home</NavLink>
             </li>
