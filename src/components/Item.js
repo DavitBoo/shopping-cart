@@ -1,19 +1,27 @@
 import React from 'react'
-import image from '../assets/img/ketzalak_notewood.jpg'
 import { NavLink } from 'react-router-dom';
 
 
-export default function Item() {
+export default function Item(props) {
+  const{title, price, description, image, id} = props.item
+  // const slug = title.split(' ').join('-')
+
+  let shortDescription = description.split(' ')
+  shortDescription.splice(10, description.length-10)
+  shortDescription = shortDescription.join(' ') + ' ...'
+
   return (
     <div id="item" className='flex'>
+      <NavLink className='flex' to={`/product/${id}`}>
         <img src={image} alt="" />
         <div className="item-info flex-col">
-          <p className='title'>Cuaderno de Fresno Eguzkilore</p>
-          <p className='price'>40€</p>
-          <p className='description'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, alias.</p>
+          <p className='title'>{title}</p>
+          <p className='price'>{price}€</p>
+          <p className='description'>{shortDescription}</p>
           <p className='available-stock'>available stock</p>
-          <NavLink to="/product/1">Click!</NavLink>
+          <div className='see-product-btn'>See the product!</div>
         </div>
+      </NavLink>
     </div>
   )
 }

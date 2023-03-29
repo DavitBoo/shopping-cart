@@ -13,7 +13,7 @@
 body{
   margin: 0;
   padding: 0;
-  background-color: #e9f1ec;
+  background-color: #fff;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -176,14 +176,23 @@ button{
 
 
 /* ** *** item  *** ** **/
-#item{
+#item > a{
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
   max-width: 500px;
+  cursor: pointer;
+}
+
+#item > a > *{
+  margin: 2.7rem auto;
 }
 
 #item img{
   max-width: 150px;
+}
+
+#item .item-info > *{
+  margin: .2rem 0;
 }
 
 
@@ -198,6 +207,16 @@ button{
 
 #item .description{
   font-weight: 300;
+}
+
+#item .see-product-btn{
+  margin-top: 1.2rem;
+  background-color: #000;
+  color: #fff;
+  max-width: 150px;
+  border-radius: 2px;
+  text-align: center;
+  padding: .3rem;
 }
 
 .available-stock{
