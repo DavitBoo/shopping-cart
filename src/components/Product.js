@@ -1,17 +1,29 @@
 import React from 'react'
-import image from '../assets/img/ketzalak_notewood.jpg'
+import { useParams } from 'react-router-dom';
 
-export default function Product() {
+import { v4 as uuidv4 } from 'uuid';
+
+export default function Product(props) {
+
+  const { addCartItems, products } = props
+
+  const { id } = useParams() // Obtener el valor de id desde las props
+  const { price, title, description, image } = props.products[id-1]
+
+  const sendToAppState = () => {
+    addCartItems({...products[id-1], uuid:uuidv4()})
+  }
+
   return (
     <div id='product' className='flex-col'>
       <h1 className='product-h'>Product Info</h1>
       <div>
         <img src={image} alt="" />
         <div className='flex-col'>
-          <p className='price'>40€</p>
-          <p className='title'>Cuaderno bonico</p>
-          <p className='description'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque voluptate recusandae at. Omnis, natus iste dolorem commodi ea id accusantium!</p>
-          <button>Add to Cart</button>
+          <p className='price'>{price}€</p>
+          <p className='title'>{title}</p>
+          <p className='description'>{description}</p>
+          <button onClick={sendToAppState}>Add to Cart</button>
         </div>
       </div>
     </div>

@@ -1,14 +1,24 @@
 import React from 'react'
-import image from '../assets/img/ketzalak_notewood.jpg'
 
-export default function CartItem() {
+export default function CartItem(props) {
+  const {image, title, price, uuid} = props.item
+
+  const sendToAppState = () => {
+    props.deleteCartItems(uuid);
+  }
+
   return (
     <div id="cart-item">
         <img src={image} alt="" />
-        <p>Card title</p>
-        <p>price</p>
-        <input type="number" name="" id="" />
-        <button className='remove-btn'>x</button>
+        <p>{title}</p>
+        <p>{price}</p>
+        <div className='flex'>
+          <button>+</button>
+          <input type="" name="" id="" />
+          <button>-</button>
+        </div>
+
+        <button className='remove-btn' onClick={sendToAppState}>x</button>
     </div>
   )
 }

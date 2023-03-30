@@ -10,6 +10,7 @@ import ShopPage from './pages/ShopPage';
 function App() {
   const [isOpen, setIsOpen] = useState(false);
   const [products, setProducts] = useState([])
+  const [cartItems, setCartItems] = useState([])
 
   const toggleCart = () => {
     setIsOpen(!isOpen);
@@ -22,16 +23,28 @@ function App() {
   }, []);
 
 
+  const addCartItems = (product) => {
+    setCartItems([...cartItems, product]);
+  }
+
+  const deleteCartItems = (key) => {
+    setCartItems(items => items.filter(item => item.uuid !== key));
+  }
+
   return (
     <BrowserRouter>
       <div className="App">
-        <Header toggleCart={toggleCart}/>
-        {isOpen ? <Cart /> : null}
+        <Header toggleCart={toggleCart} numberOfItems={cartItems.length}/>
+        {isOpen ? <Cart cartItems={cartItems} deleteCartItems={deleteCartItems}/> : null}
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/shop" element={<ShopPage products={products}/>} />
-          <Route path="/product/:id" element={<Product products={products}/>} />
-        </Routes>
+          <Route 
+              path="/product/:id" 
+              element={<Product products={products} 
+              cartItems={cartItems} 
+              addCartItems={addCartItems}/>} 
+          /></Routes>
       </div>
     </BrowserRouter>
   );

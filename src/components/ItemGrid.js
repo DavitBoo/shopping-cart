@@ -7,7 +7,7 @@ export default function ItemGrid(props) {
   return (
     <div id='item-grid' className='flex'>
       {products.map(item => {
-        return <Item item={item}/>
+        return <Item key={item.id} item={item}/>
       })}
            
     </div>

@@ -3,19 +3,23 @@ import CartItem from "./CartItem";
 
 
 
-export default function Cart (){
-  const [isOpen, setIsOpen] = useState(false);
+export default function Cart (props){
 
-  const toggleCart = () => {
-    setIsOpen(!isOpen);
-  };
+  const {cartItems, deleteCartItems} = props
+
+  const totalPrice = cartItems.reduce((acc, item) => {
+    return acc + item.price
+  }, 0)
 
   return (
     <div id="cart">
       <div className="cart-items-container flex-col">
-        <CartItem/>
-        <CartItem/>
-        <div className="cart-fields total-field">Total: 40€</div>
+        {
+          cartItems.map(item => {
+            return <CartItem key={item.uuid} item={item} deleteCartItems={deleteCartItems}/>
+          })
+        }
+        <div className="cart-fields total-field">Total: {totalPrice}€</div>
         <button className="cart-fields checkout-btn">Checkout</button>
         <button className="cart-fields close-btn">Close</button>
       </div>

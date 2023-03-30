@@ -119,11 +119,13 @@ button{
 
 .item-counter{
   position: absolute;
-  left: -20px;
+  left: -10px;
   bottom: 0;
   background-color: #fff;
   border-radius: 100%;
   padding: .1rem .5rem;
+  border: 1px solid #0000005f;
+  opacity: .7;
 }
 
 /* ** *** home page  *** ** */
