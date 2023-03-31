@@ -8,6 +8,7 @@
 
 .App{
   position: relative;
+  min-height: 100%;
 }
 
 body{
@@ -59,10 +60,12 @@ button{
 
 /* ** *** header *** ** */
 #header{
+  background-color: #00000043;
   position: sticky;
   top:0;
   left: 0;
   z-index: 15;  
+  height: 70px;
 }
 
 #header * {
@@ -70,6 +73,7 @@ button{
 }
 
 #header ul{
+  height: 100%;
   justify-content: space-around;
   align-items: center;
   text-align: center;
@@ -83,11 +87,18 @@ button{
   flex: 1
 }
 
+#header a{
+  max-width: 100%;
+}
 
 #header img{
-  width: 75%;
+  max-height: 70px;
 }
 /* ** *** *** home nav */
+
+.home-nav{
+  box-shadow: 0px 0px 2px #fbfbfbb6;
+}
 
 .home-nav a {
   color: #fff;
@@ -245,6 +256,7 @@ button{
   font-size: .85rem;
   column-gap: 2rem;
   grid-auto-flow: dense;
+  column-gap: 2rem;
 }
 
 #product > div > div {
@@ -257,7 +269,7 @@ button{
 }
 
 #product img{
-  max-width: 100%;
+  max-width: 80%;
 }
 
 #product .price{
@@ -300,28 +312,47 @@ button{
 }
 
 
+.loading-screen{
+  font-size: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+
 /* ****** Cart ****** */
-#cart{
+.cart-overlay{
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background-color: rgba(103, 103, 103, 0.668);
+  height: max(100%, 100vh);
+  background-color: rgba(0, 0, 0, 0.301);
   z-index: 12;
 }
+
+/* #cart{
+  /* position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; */
+  /* height: max(100%, 100vh); */
+  /* background-color: rgba(0, 0, 0, 0.301);
+  z-index: 18; 
+} */
 
 
 
 #cart .cart-items-container{
   position: fixed;
   right: 0;
-  top:10%;
+  top: 71px;
   max-width: max(400px, 40%);
-  height: 100%;
+  min-height: 500px;
+  max-height:calc(100vh - 140px);
   background-color: rgb(35, 35, 35);
   padding: 4rem 2rem;
-  overflow-y: auto;
+  overflow-y: scroll;
+  z-index: 18;
 }
 
 .cart-fields{
@@ -337,10 +368,14 @@ button{
 
 #cart .checkout-btn{
   background-color: #27AE60 ;
+  cursor:pointer;
+  color: #fff;
 }
 
 #cart .close-btn{
   background-color: #E74C3C;
+  cursor:pointer;
+  color: #fff;
 }
 
 /* ** *** Cart Item *** ** */
@@ -354,6 +389,7 @@ button{
   margin: 1rem auto;
   background-color: #fff;
   border-radius: 5px;
+  transition: all .2s;
 }
 #cart-item img{
   max-width: 100%;
@@ -367,5 +403,6 @@ button{
   border: none;
   font-size: 1.5rem;
   background-color: #0000;
+  cursor: pointer;
 
 }

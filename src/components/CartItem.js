@@ -11,12 +11,12 @@ export default function CartItem(props) {
     <div id="cart-item">
         <img src={image} alt="" />
         <p>{title}</p>
-        <p>{price}</p>
-        <div className='flex'>
+        <p>{price} €</p>
+        {/* <div className='flex'>
           <button>+</button>
           <input type="" name="" id="" />
           <button>-</button>
-        </div>
+        </div> */}
 
         <button className='remove-btn' onClick={sendToAppState}>x</button>
     </div>

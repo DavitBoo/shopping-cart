@@ -35,7 +35,11 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Header toggleCart={toggleCart} numberOfItems={cartItems.length}/>
-        {isOpen ? <Cart cartItems={cartItems} deleteCartItems={deleteCartItems}/> : null}
+        {isOpen ? <Cart 
+                    cartItems={cartItems} 
+                    deleteCartItems={deleteCartItems}
+                    toggleCart={toggleCart}
+                  /> : null}
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/shop" element={<ShopPage products={products}/>} />

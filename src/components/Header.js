@@ -22,7 +22,9 @@ export default function Header(props) {
   return (
     <div id="header">
         <ul className={`flex ${navClass}`}>
-            <NavLink to="/" activeClassName="active"><img src={logo} alt="" /></NavLink>
+            <li>
+              <NavLink to="/" activeClassName="active"><img src={logo} alt="" /></NavLink>
+            </li>
             <li>
                 <NavLink to="/" activeClassName="active">Home</NavLink>
             </li>
