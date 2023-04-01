@@ -1,5 +1,5 @@
 import { render, fireEvent, screen } from '@testing-library/react';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import App from './App';
 import Header from './components/Header';
 
@@ -9,9 +9,9 @@ import Header from './components/Header';
 describe('My App', () => {
   test('renders header', () => {
     render(
-      <BrowserRouter>
+      <HashRouter>
         <Header numberOfItems={0} toggleCart={() => {}} />
-      </BrowserRouter>
+      </HashRouter>
     );
   
     const homeLink = screen.getByText('Home');

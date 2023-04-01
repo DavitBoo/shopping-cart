@@ -11,6 +11,10 @@ export default function Cart (props){
     return acc + item.price
   }, 0)
 
+  const displayAlert = () => {
+    alert('Thank you for visiting the store! :)')
+  }
+
   return (
     <div id="cart">
       <div className="cart-overlay" onClick={props.toggleCart}></div>
@@ -22,7 +26,7 @@ export default function Cart (props){
           })
         }
         <div className="cart-fields total-field">Total: {totalPrice}€</div>
-        <button className="cart-fields checkout-btn" >Checkout</button>
+        <button className="cart-fields checkout-btn" onClick={displayAlert}>Checkout</button>
         <button className="cart-fields close-btn" onClick={props.toggleCart}>Close</button>
       </div>
     </div>
