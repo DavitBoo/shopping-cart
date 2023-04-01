@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/shopping-cart/static/css/main.85b29195.css",
+    "main.js": "/shopping-cart/static/js/main.27c73ea3.js",
+    "static/media/ketzalak_notewood.jpg": "/shopping-cart/static/media/ketzalak_notewood.d6ed8ceccbe169e79d1c.jpg",
+    "static/media/logo.png": "/shopping-cart/static/media/logo.d3f745b9de45656e6779.png",
+    "index.html": "/shopping-cart/index.html",
+    "main.85b29195.css.map": "/shopping-cart/static/css/main.85b29195.css.map",
+    "main.27c73ea3.js.map": "/shopping-cart/static/js/main.27c73ea3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.85b29195.css",
+    "static/js/main.27c73ea3.js"
+  ]
+}
