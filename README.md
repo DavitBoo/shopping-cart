@@ -3,7 +3,7 @@
 It is just a web example of an **Online Store** for the practical use of **react-router** .
 
 ## How it looks
-![Store Screenshort](screenshot.jpg)
+![Store Screenshort](/screenshot.jpg)
 
 ## The project use
 
