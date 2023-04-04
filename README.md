@@ -1,6 +1,7 @@
 # About the project
 
 It is just a web example of an **Online Store** for the practical use of **react-router** .
+**Is it not a real store**, you will not be able to buy anothing, I am sorry (at least not yet)
 
 ## How it looks
 ![Store Screenshort](https://github.com/DavitBoo/shopping-cart/blob/main/screenshot.png)
