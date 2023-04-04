@@ -1,6 +1,6 @@
 # About the project
 
-It is just a web example of an **Online Store** for the practical use of **react-router** .
+It is just a web example of an **Online Store** for the practical use of **react-router** . <br>
 **Is it not a real store**, you will not be able to buy anothing, I am sorry (at least not yet)
 
 ## How it looks
