@@ -1,8 +1,11 @@
 # About the project
 
-It is just a web example of an **Online Store** for the practical use of **react-router** and testing react with **jest**.
+It is just a web example of an **Online Store** for the practical use of **react-router** .
 
-## I will be using
+## How it looks
+![Store Screenshort](screenshot.jpg)
+
+## The project use
 
 <ul>
     <li>
@@ -13,6 +16,9 @@ It is just a web example of an **Online Store** for the practical use of **react
     </li>
     <li>
         <a href="https://v5.reactrouter.com/">React Router</a>
+    </li>
+    <li>
+        <a href="https://fakestoreapi.com/">Fake Store API</a> 
     </li>
 </ul>
 
